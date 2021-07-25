@@ -66,7 +66,7 @@
                                 <input type="text" name="name" class="form-control" value="<?php echo $n ?>" autocomplete="off" required>
                               </div>
                               <div class="mb-3">
-                                <label for="batch">Course</label>
+                                <label for="batch">Batch</label>
                                 <input type="text" name="batch" class="form-control" value="<?php echo $b ?>" autocomplete="off" required>
                               </div>
                               <div class="mb-3">

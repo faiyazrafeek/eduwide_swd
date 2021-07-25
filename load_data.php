@@ -9,13 +9,15 @@
 
     $output .= "
         <table class='table table-bordered table-striped'>
+            <thead class='table-dark'>
             <tr>
                 <th width='5%'>ID</th>
                 <th width='40%'>Name</th>
                 <th width='10%'>Batch</th>
                 <th width='20%'>Course</th>
                 <th width='20%'>Actions</th>
-            </tr>  
+            </tr> 
+            </thead> 
     ";
 
     if(mysqli_num_rows($res) < 1){
