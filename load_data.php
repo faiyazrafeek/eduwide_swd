@@ -1,7 +1,7 @@
 <?php 
     include("connection.php");
 
-    $query = "SELECT * FROM students ORDER BY id ASC";
+    $query = "SELECT * FROM students";
 
     $res = mysqli_query($conn, $query);
 
@@ -15,13 +15,8 @@
                 <th width='10%'>Batch</th>
                 <th width='20%'>Course</th>
                 <th width='20%'>Actions</th>
-            </tr>
-       
+            </tr>  
     ";
-
-    echo "<a href='add_user.php'>
-        <button class='btn btn-success my-3 btn-sm'>Add New User</button>
-    </a>";
 
     if(mysqli_num_rows($res) < 1){
         $output .= "
@@ -34,7 +29,7 @@
     while($row = mysqli_fetch_array($res)){
         $output .= "
             <tr>
-                <td>".$row['id']."</td>
+                <td>#".$row['id']."</td>
                 <td>".$row['name']."</td>
                 <td>".$row['batch']."</td>
                 <td>".$row['course']."</td>
@@ -55,11 +50,5 @@
             </tr>
         ";
     }
-
-
-
     echo $output;
-
-
-
 ?>
