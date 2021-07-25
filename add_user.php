@@ -7,7 +7,7 @@
     $course = $_POST['course'];
 
 
-    $query = "INSERT INTO students(name, course) VALUES('$name', '$batch', '$course')";
+    $query = "INSERT INTO students(name, batch, course) VALUES('$name', '$batch', '$course')";
 
     $res = mysqli_query($conn, $query);
 
