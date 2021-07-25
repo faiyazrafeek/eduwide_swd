@@ -1,1 +1,1 @@
-# eduwide_swd
+# SWD Web Application Practical
