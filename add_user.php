@@ -3,10 +3,11 @@
 
   if(isset($_POST['add_user'])){
     $name = $_POST['name'];
+    $batch = $_POST['batch'];
     $course = $_POST['course'];
 
 
-    $query = "INSERT INTO students(name, course) VALUES('$name', '$course')";
+    $query = "INSERT INTO students(name, course) VALUES('$name', '$batch', '$course')";
 
     $res = mysqli_query($conn, $query);
 
@@ -51,6 +52,10 @@
                               <div class="mb-3">
                                 <label for="name">Name</label>
                                 <input type="text" name="name" class="form-control" autocomplete="off" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="batch">Course</label>
+                                <input type="number" name="batch" class="form-control" autocomplete="off" required>
                               </div>
                               <div class="mb-3">
                                 <label for="course">Course</label>

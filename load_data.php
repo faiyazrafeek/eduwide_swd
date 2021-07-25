@@ -10,9 +10,10 @@
     $output .= "
         <table class='table table-bordered table-striped'>
             <tr>
-                <th width='10%'>ID</th>
-                <th width='35%'>Name</th>
-                <th width='35%'>Course</th>
+                <th width='5%'>ID</th>
+                <th width='40%'>Name</th>
+                <th width='10%'>Batch</th>
+                <th width='20%'>Course</th>
                 <th width='20%'>Actions</th>
             </tr>
        
@@ -35,6 +36,7 @@
             <tr>
                 <td>".$row['id']."</td>
                 <td>".$row['name']."</td>
+                <td>".$row['batch']."</td>
                 <td>".$row['course']."</td>
                 <td>
                     <div class='col-md-12'>

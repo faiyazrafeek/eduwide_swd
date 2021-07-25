@@ -8,15 +8,17 @@
   $row = mysqli_fetch_array($res);
 
   $n = $row['name'];
+  $b = $row['batch'];
   $c = $row['course'];
 
 
   if(isset($_POST['edit_user'])){
     $name = $_POST['name'];
+    $batch = $_POST['batch'];
     $course = $_POST['course'];
 
 
-    $query = "UPDATE students SET name = '$name', course = '$course' WHERE id = '$id' ";
+    $query = "UPDATE students SET name = '$name', batch = '$batch', course = '$course' WHERE id = '$id' ";
 
     $res = mysqli_query($conn, $query);
 
@@ -62,6 +64,10 @@
                               <div class="mb-3">
                                 <label for="name">Name</label>
                                 <input type="text" name="name" class="form-control" value="<?php echo $n ?>" autocomplete="off" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="batch">Course</label>
+                                <input type="text" name="batch" class="form-control" value="<?php echo $b ?>" autocomplete="off" required>
                               </div>
                               <div class="mb-3">
                                 <label for="course">Course</label>
