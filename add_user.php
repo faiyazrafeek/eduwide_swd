@@ -11,14 +11,16 @@
 
     $res = mysqli_query($conn, $query);
 
-    if($res){
-      echo "<script>alert('Student added sucessfully')</script>";
-
-      $to_email = 'faiyazrafeek@gmail.com';
+    $to_email = 'faiyazrafeek@gmail.com';
       $subject = 'Testing PHP Mail';
       $message = 'This mail is sent using the PHP mail function';
       $headers = 'From: fadesign001@gmail.com';
-      mail($to_email,$subject,$message,$headers);
+      
+
+    if($res && mail($to_email,$subject,$message,$headers)){
+      echo "<script>alert('Student added sucessfully')</script>";
+
+      
 
       header("location:index.php");
     }else{
