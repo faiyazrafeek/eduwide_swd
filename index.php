@@ -28,7 +28,7 @@
       include("navbar.php");
       ?>
       <div class="container">
-          <h3 class="h3 my-5 text-center">Student Details</h3>
+          <h3 class="h3 my-5 text-center">Student Details New</h3>
           <div class="col-md-12">
               <div class="result">
 

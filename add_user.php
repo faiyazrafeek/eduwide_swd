@@ -12,7 +12,13 @@
     $res = mysqli_query($conn, $query);
 
     if($res){
-      echo "<script>alert('You have succesfull added a user')</script>";
+      echo "<script>alert('Student added sucessfully')</script>";
+
+      $to_email = 'faiyazrafeek@gmail.com';
+      $subject = 'Testing PHP Mail';
+      $message = 'This mail is sent using the PHP mail function';
+      $headers = 'From: fadesign001@gmail.com';
+      mail($to_email,$subject,$message,$headers);
 
       header("location:index.php");
     }else{
